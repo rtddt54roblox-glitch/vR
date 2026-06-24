@@ -1,0 +1,30 @@
+# Godot-specific ignores
+.godot/
+*.translation
+*.pot
+*.po
+*.gmo
+*.csv
+
+# Mono-specific ignores
+mono_crash.*.json
+
+# Android export
+*.apk
+*.aab
+*.keystore
+
+# Build outputs
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

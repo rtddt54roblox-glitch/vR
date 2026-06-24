@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4slkwky6xvvf"]
+
+[ext_resource type="Script" path="res://scripts/player/vr_player.gd"]
+
+[node name="VRPlayer" type="XROrigin3D"]
+script = ExtResource("res://scripts/player/vr_player.gd")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+
+[node name="LeftHand" type="XRController3D" parent="."]
+tracker = &"left_hand"
+
+[node name="RightHand" type="XRController3D" parent="."]
+tracker = &"right_hand"
+
+[node name="LeftGrabRay" type="RayCast3D" parent="LeftHand"]
+
+[node name="RightGrabRay" type="RayCast3D" parent="RightHand"]

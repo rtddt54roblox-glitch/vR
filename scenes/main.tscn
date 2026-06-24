@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8xdkbq3hc7a4"]
+
+[ext_resource type="Script" path="res://scripts/main.gd"]
+[ext_resource type="PackedScene" uid="uid://d4slkwky6xvvf" path="res://scenes/player/vr_player.tscn"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("res://scripts/main.gd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 100, 0, -1, 0)
+size = Vector3(200, 2, 200)
+
+[node name="VRPlayer" parent="." instance=ExtResource("uid://d4slkwky6xvvf")]
+
+[node name="SurvivalManager" type="Node" parent="."]
